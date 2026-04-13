@@ -52,7 +52,16 @@ The API should be available on the port you specify in the `.env` file.
 
 ### .env variables
 
-Need to specify necessary variables. To do that, please create a `.env` file in the main folder before you run `npm start`
+Need to specify necessary variables. To do that, please create a `.env` file in the backend folder before you run `npm start`.
+Should contain variables below
+
+```
+DB_STRING = <connection string>
+DB_NAME = <db name>
+API_PORT = <API PORT>
+JWT_SECRET = <Generated JWT secret>
+
+```
 
 ### Workflow:
 
