@@ -9,7 +9,7 @@ const authMiddleware = require("../src/middleware/authMiddleware");
 router.post("/auth/register", AuthService.registerUser);
 router.post("/auth/login", AuthService.loginUser);
 
-// //---- Trip ----
+//---- Trip ----
 router.post('/trip/create',authMiddleware,TripService.createTrip);
 router.get('/trip/read',authMiddleware,TripService.getAllTrips);
 router.get('/trip/read/:id',authMiddleware,TripService.getTripById);

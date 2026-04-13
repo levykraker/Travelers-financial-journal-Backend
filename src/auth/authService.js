@@ -9,7 +9,7 @@ async function registerUser(req, res) {
 
     if (!email || !password) {
       return res.status(400).json({
-        message: "Email i hasło są wymagane",
+        message: "Email and passwords are obligatory",
       });
     }
 
@@ -17,7 +17,7 @@ async function registerUser(req, res) {
 
     if (existingUser) {
       return res.status(400).json({
-        message: "Użytkownik już istnieje",
+        message: "User already exist",
       });
     }
 
@@ -31,7 +31,7 @@ async function registerUser(req, res) {
     });
 
     res.status(201).json({
-      message: "Użytkownik utworzony poprawnie",
+      message: "Created user",
       userId: result.insertedId,
     });
   } catch (error) {

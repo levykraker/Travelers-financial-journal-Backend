@@ -6,7 +6,7 @@ function authMiddleware(req, res, next) {
 
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
       return res.status(401).json({
-        message: "Brak tokena",
+        message: "Missing token",
       });
     }
 
@@ -18,7 +18,7 @@ function authMiddleware(req, res, next) {
     next();
   } catch (error) {
     return res.status(401).json({
-      message: "Nieprawidłowy lub wygasły token",
+      message: "Wrong or expired token",
     });
   }
 }
